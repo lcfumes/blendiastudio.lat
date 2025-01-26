@@ -2243,3 +2243,120 @@ section {
 .faq-area .faq-item {
   transition: all 0.3s ease; /* Transição suave para as cores no hover */
 }
+
+/* Navbar Branco com Texto Azul */
+.navbar-area {
+  background-color: #ffffff; /* Fundo branco */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  padding: 10px 20px; /* Espaçamento interno */
+  position: sticky; /* Navbar fixa ao rolar */
+  top: 0;
+  z-index: 9999; /* Garante que fique acima de outros elementos */
+}
+
+/* Links do Menu */
+.navbar-area .navbar-nav .nav-item a {
+  color: #0f52ba; /* Azul para os links */
+  font-weight: bold; /* Destaca o texto */
+  font-size: 1rem; /* Tamanho confortável */
+  padding: 8px 15px; /* Espaçamento nos links */
+  transition: color 0.3s ease; /* Suavidade na interação */
+}
+
+.navbar-area .navbar-nav .nav-item a:hover {
+  color: #ffc107; /* Amarelo no hover para contraste */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* Ícone do Menu Responsivo */
+.navbar-toggler {
+  border: none; /* Remove bordas */
+  color: #0f52ba; /* Azul do ícone */
+}
+
+/* Logo da Navbar */
+.navbar-area .navbar-brand img {
+  max-height: 50px; /* Tamanho do logo */
+  object-fit: contain; /* Garante proporção correta */
+  margin-right: 15px; /* Espaçamento com os itens */
+}
+
+/* Ajuste para Dispositivos Menores */
+@media (max-width: 768px) {
+  .navbar-area .navbar-nav .nav-item a {
+    font-size: 0.9rem; /* Tamanho reduzido em telas menores */
+  }
+
+  .navbar-toggler {
+    font-size: 1.2rem; /* Ícone levemente maior */
+  }
+}
+
+/* Estilo do Contêiner do Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff; /* Fundo branco */
+  padding: 5px 15px;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  margin-right: 15px; /* Espaçamento entre o logo e os links */
+}
+
+/* Estilo da Imagem do Logo */
+.logo-image {
+  max-height: 50px; /* Ajuste do tamanho do logo */
+  object-fit: contain; /* Garante proporção */
+  margin-right: 10px; /* Espaço entre imagem e texto */
+}
+
+/* Estilo do Texto no Logo */
+.logo-text {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333333; /* Texto escuro */
+  background-color: #dddddd; /* Fundo cinza claro */
+  padding: 2px 8px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra no fundo do texto */
+}
+
+/* Estilo do Navbar */
+.navbar-area {
+  background-color: #ffffff; /* Fundo branco do navbar */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  padding: 10px 20px;
+}
+
+/* Links do Navbar */
+.navbar-nav .nav-item a {
+  color: #0f52ba; /* Azul para os links */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item a:hover {
+  color: #ff5733; /* Laranja no hover */
+}
+
+/* Botão de Menu Responsivo */
+.navbar-toggler {
+  border: none;
+  color: #0f52ba;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25d366; /* Verde padrão do WhatsApp */
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem; /* Aumenta o tamanho do texto */
+  font-weight: bold;
+  padding: 12px 24px; /* Espaçamento interno */
+  border-radius: 50px; /* Bordas arredondadas */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition
