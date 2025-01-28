@@ -60,24 +60,18 @@
     0px 20px 32px rgba(96, 97, 112, 0.24);
 }
 
-/* Variáveis globais */
-:root {
-  --font-family: "Inter", sans-serif;
-  --black: #000000;
-  --dark-gray: #333333;
-  --white: #ffffff;
-  --text-color: #f5f5f5;
-  --background-gradient: linear-gradient(to bottom, #000000, #333333);
-  --section-gradient: linear-gradient(to right, #000000, #222222);
-  --button-gradient: linear-gradient(to bottom, #444444, #000000);
-  --shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-}
-
 body {
   font-family: var(--font-family);
-  color: var(--black);
+  color: var(--white); /* Ajustar a cor do texto para contraste */
   font-size: 16px;
+  background: linear-gradient(180deg, #000000 0%, #4d4d4d 100%);
+  /* O degradê começa no preto (#000000) e vai até o cinza escuro (#4d4d4d) */
+  background-attachment: fixed; /* Fixa o fundo ao rolar a página */
+  background-size: cover; /* Cobre toda a tela */
+  margin: 0;
+  padding: 0;
 }
+
 @media (max-width: 991px) {
   body {
     font-size: 14px;
@@ -412,6 +406,7 @@ p {
 
 /*===== NAVBAR NINE =====*/
 .navbar-area.navbar-nine {
+  background: #000;
   padding: 10px 0;
   position: absolute;
   left: 0;
@@ -477,7 +472,7 @@ p {
     top: 116%;
     left: 0;
     width: 100%;
-    background-color: var(--primary);
+    background-color: #000;
     z-index: 8;
     padding: 10px 16px;
   }
@@ -757,6 +752,7 @@ p {
   transition: all 0.3s ease-out 0s;
 }
 .navbar-area.navbar-nine .navbar .navbar-btn .menu-bar:hover {
+  border-color: transparent;
   color: var(--primary);
   background-color: var(--white);
 }
@@ -1159,6 +1155,91 @@ p {
 }
 
 
+/*===========================
+  services css 
+===========================*/
+.services-eight {
+  padding: 100px 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services-eight {
+    padding: 80px 0 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .services-eight {
+    padding: 60px 0 30px 0;
+  }
+}
+.services-eight .single-services {
+  padding: 40px 30px;
+  border: 1px solid var(--light-1);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.services-eight .single-services:hover {
+  box-shadow: var(--shadow-4);
+}
+.services-eight .single-services:hover .service-icon {
+  color: var(--white);
+  border-color: transparent;
+  background: var(--primary);
+}
+.services-eight .single-services:hover .service-icon::after {
+  opacity: 1;
+  visibility: visible;
+}
+.services-eight .single-services .service-icon {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  background: var(--white);
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 40px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  position: relative;
+}
+.services-eight .single-services .service-icon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  background: var(--primary);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  z-index: -1;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+.services-eight .single-services .service-content h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.services-eight .single-services .service-content p {
+  color: var(--dark-3);
+}
 
 
 
@@ -1255,10 +1336,10 @@ p {
 .pricing-style-fourteen {
   border: 1px solid var(--light-1);
   border-radius: 10px;
-  margin-top: 30px;
+  margin-top: 90px;
   background-color: var(--white);
   transition: all 0.4s ease;
-  padding: 50px 35px;
+  padding: 90px 35px;
   text-align: center;
   z-index: 0;
 }
@@ -1406,7 +1487,6 @@ p {
 
 /*===== latest-news-area =====*/
 .latest-news-area {
-  background: var(--white);
   padding: 100px 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1832,808 +1912,135 @@ p {
   background-color: var(--primary-dark);
 }
 
-.navbar-area {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Ocupa apenas a largura da tela */
-  height: 80px; /* Define uma altura fixa */
-  max-height: 80px; /* Evita que estique */
-  overflow: hidden; /* Garante que não transborde */
+
+
+.header-eight {
+  background: linear-gradient(180deg, #000000, #222); /* Degradê preto para cinza escuro */
+  color: #fff; /* Cor principal dos textos */
 }
 
-/* Ajuste do container do navbar */
-.navbar-area .container {
-  height: 100%; /* Ocupa a altura total do navbar */
-  display: flex;
-  align-items: center; /* Centraliza verticalmente */
+.header-eight h1 {
+  color: #fff; /* Título em branco */
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5); /* Adiciona leve sombra ao texto */
 }
 
-/* Estilo das seções */
-section {
-  scroll-snap-align: start;
-  height: 100vh; /* Ocupa 100% da altura da viewport */
-  
+.header-eight p {
+  color: #ccc; /* Parágrafo em cinza claro */
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.header-eight .btn.whatsapp-btn {
+  background-color: #25d366; /* Verde do WhatsApp */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding-top: 80px; /* Evita sobreposição com o navbar */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Adiciona margem ao scroll para âncoras */
-section[id] {
-  scroll-margin-top: 80px; /* Compensa a altura do navbar */
+.header-eight .btn.whatsapp-btn i {
+  margin-right: 8px;
+  font-size: 1.3em;
 }
 
-  #heroCarousel {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+.header-eight .btn.whatsapp-btn:hover {
+  background-color: #1bc659; /* Tom mais escuro no hover */
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Efeito de sombra */
+}
+
+.carousel-indicators button {
+  background-color: #fff; /* Indicadores brancos */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* Ícones de controle em branco */
+}
+
+.header-eight .button {
+  margin-top: 20px; /* Espaço acima do botão */
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .header-eight .header-content {
+    text-align: left; /* Mantém alinhado à esquerda em resoluções intermediárias */
+    margin-bottom: 15px; /* Espaço entre conteúdo e o carousel */
   }
 
-  #heroCarousel .carousel-inner {
-    border-radius: 15px;
+  .header-eight h1 {
+    font-size: 2.2em; /* Ajusta o tamanho do título para telas intermediárias */
+    line-height: 1.4;
   }
 
-  #heroCarousel .carousel-inner img {
-    object-fit: cover;
-    height: 500px;
+  .header-eight p {
+    font-size: 1.1em; /* Ajusta o tamanho do parágrafo */
+    line-height: 1.6;
+    margin-bottom: 15px;
   }
 
-  #heroCarousel .carousel-control-prev-icon,
-  #heroCarousel .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 50%;
+  .header-eight .button {
+    margin-top: 15px; /* Mantém espaçamento proporcional */
   }
+}
 
-  #heroCarousel .carousel-indicators [data-bs-target] {
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-  }
-
-  #heroCarousel .carousel-indicators .active {
-    background-color: #007bff;
-  }
-
-  .benefits-area {
-    padding: 60px 0;
-  }
-
-  .benefits-area .benefits-content h2 {
-    font-size: 2.25em;
-    font-weight: 700;
-    color: var(--primary);
+@media (max-width: 767px) {
+  .header-eight .header-content {
+    text-align: center; /* Centraliza o texto e o botão em telas pequenas */
     margin-bottom: 20px;
   }
 
-  .benefits-area .benefits-content p {
-    color: var(--dark-3);
-    margin-bottom: 15px;
+  .header-eight h1 {
+    font-size: 1.8em; /* Reduz tamanho do título em telas pequenas */
+    line-height: 1.3;
+  }
+
+  .header-eight p {
     font-size: 1em;
     line-height: 1.5;
+    margin-bottom: 15px;
   }
 
-  .benefits-area .benefits-content ul {
+  .header-eight .button {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-eight .button {
     margin-top: 20px;
   }
 
-  .benefits-area .benefits-content ul li {
-    font-size: 1em;
-    color: var(--dark-1);
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-  }
-
-  .benefits-area .benefits-content ul li::before {
-    content: "\2713";
-    color: var(--success);
-    font-weight: bold;
-    margin-right: 10px;
-  }
-
-  .benefits-area .benefits-content blockquote {
-    font-size: 1.1em;
-    font-style: italic;
-    background-color: var(--light-1);
-    padding: 15px 20px;
-    border-left: 4px solid var(--primary);
-    margin: 20px 0;
-    color: var(--dark-2);
-  }
-
-  .benefits-area .btn {
-    margin-top: 20px;
-  }
-
-  #services {
-  padding-top: 80px; /* Compensa o espaço do navbar */
-  scroll-margin-top: 80px; /* Ajusta a âncora para rolagem */
-}
-
-.faq-content {
-display: grid; /* Usa grid layout para organizar */
-grid-template-columns: repeat(2, 1fr); /* Garante dois cards por linha */
-gap: 20px; /* Espaçamento uniforme entre os cards */
-}
-
-.faq-item {
-padding: 15px; /* Espaçamento interno dos cards */
-border: 1px solid #ddd;
-border-radius: 8px;
-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-display: flex;
-flex-direction: column; /* Organiza o conteúdo interno em coluna */
-justify-content: space-between; /* Distribui os elementos dentro do card */
-align-items: flex-start; /* Alinha os textos à esquerda */
-}
-
-.faq-item h5 {
-font-size: 1rem; /* Reduz o tamanho do título */
-margin-bottom: 10px; /* Espaçamento menor abaixo do título */
-}
-
-.faq-item p {
-font-size: 0.9rem; /* Tamanho menor para o texto */
-line-height: 1.4; /* Mantém legibilidade */
-margin-bottom: 0; /* Remove margens extras */
-}
-
-/* Ajuste responsivo: um card por linha em telas menores */
-@media (max-width: 768px) {
-.faq-content {
-  grid-template-columns: 1fr; /* Um card por linha */
-}
-}
-
-.faq-area {
-padding: 60px 20px; /* Espaçamento superior e inferior */
-}
-
-.faq-content-wrapper {
-max-width: 1200px;
-margin: 0 auto; /* Centraliza o conteúdo */
-}
-
-.faq-content-wrapper {
-max-width: 1200px;
-margin: 0 auto; /* Centraliza o conteúdo */
-}
-
-.faq-item i {
-  margin-right: 10px; /* Espaço entre o ícone e o texto */
-  color: #22457a;    /* Cor do ícone (azul, neste caso) */
-  font-size: 1.8em;  /* Tamanho do ícone */
-  vertical-align: middle; /* Alinha o ícone verticalmente */
-}
-
-/* Estilo específico para o ícone de interrogação */
-.faq-item .lni-question-circle {
-  font-size: 1.2em; /* Tamanho um pouco menor para a interrogação */
-  color: #999;     /* Cor cinza mais claro para a interrogação */
-}
-
-.faq-item {
-  padding: 20px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.faq-item .lni-question-circle {
-  font-size: 1.2em;
-  color: #999;
-  margin-right: 5px; /* Espaço entre ícone e texto */
-  flex-shrink: 0; /* Impede que o ícone seja comprimido */
-
-}
-
-.faq-item h5 {
-  font-size: 1.1em;
-  margin-bottom: 5px;
-  display: flex; /* Permite alinhar os ícones temáticos */
-  align-items: center; /* Alinha os ícones temáticos verticalmente */
-}
-
-.faq-item p {
-  margin-bottom: 0;
-}
-
-/* Ícones temáticos dentro do h5 */
-.faq-item h5 i:not(.lni-question-circle) {
-  color: #22457a;
-  font-size: 1.3em;
-  margin-right: 5px; /* Espaço entre ícone temático e texto */
-}
-
-/* Ajuste responsivo: um card por linha em telas menores */
-@media (max-width: 768px) {
-  .faq-item {
-      margin-bottom: 20px;
-  }
-}
-/* Aplicação de fundo degradê na página inteira */
-/* Fundo com gradiente mais claro */
-
-
-/* Hero Section */
-#hero-area {
-  color: white;
-}
-
-/* Navbar */
-.navbar-area {
-  color: #ffffff;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
-}
-
-/* Links do Menu */
-.navbar-area .navbar-nav .nav-item a {
-  color: #e0e0e0; /* Texto cinza claro */
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 8px 15px;
-  transition: color 0.3s ease;
-}
-
-.navbar-area .navbar-nav .nav-item a:hover {
-  color: #00d4d7; /* Azul claro no hover */
-}
-
-/* Fundo dos cards de serviço */
-
-/* Footer */
-footer {
-  background-color: #333333; /* Fundo cinza escuro */
-  color: #e0e0e0;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #555555; /* Linha divisória cinza claro */
-}
-
-/* Ajustes para dispositivos menores */
-@media (max-width: 768px) {
-  .navbar-area .navbar-nav .nav-item a {
-    font-size: 0.9rem;
-  }
-
-  .navbar-toggler {
-    font-size: 1.2rem;
+  .header-eight .header-content {
+    padding: 0 10px; /* Adiciona padding para evitar que o texto fique colado nas bordas */
   }
 }
 
-/* Gradiente contínuo descendo pela página */
-
-/* Remove fundos individuais para seções */
-#hero-area,
-.benefits-area,
-.services-area,
-.faq-area,
-footer {
-  background: none; /* Transparente, para continuar o gradiente do body */
-  color: #ffffff;
-}
-
-/* Ajuste para garantir harmonia */
-section {
-  padding: 80px 20px; /* Evita quebras de layout */
-}
-
-/* Footer integrado */
-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Linha sutil no topo */
-  text-align: center;
-  padding: 20px;
-}
-/* Gradiente Preto Elegante do Topo ao Rodapé */
-
-/* Estilo geral do FAQ */
-#faq {
-  background-color: #222 !important; /* Fundo escuro */
-  padding: 60px 20px !important; /* Espaçamento superior e inferior */
-  color: #fff; /* Texto branco */
-}
-
-#faq h2 {
-  color: #00d4d7 !important; /* Título em azul claro */
-  font-weight: bold !important;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* Estilo dos itens de FAQ */
-.faq-item {
-  background: #333 !important; /* Fundo cinza escuro */
-  border-radius: 10px !important;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important; /* Sombra para destaque */
-  padding: 20px !important;
-  transition: all 0.3s ease-in-out; /* Suavidade ao passar o mouse */
-}
-
-.faq-item:hover {
-  background: #444 !important; /* Fundo mais claro ao passar o mouse */
-  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.4) !important;
-}
-
-/* Títulos dos itens */
-.faq-item h5 {
-  color: #00d4d7 !important; /* Título em azul claro */
-  font-size: 1.1em !important;
-  font-weight: bold !important;
-  margin-bottom: 10px;
-}
-
-/* Texto dos itens */
-.faq-item p {
-  color: #ccc !important; /* Texto em cinza claro */
-  font-size: 0.95em;
-  line-height: 1.5;
-}
-
-/* Ícones dentro dos itens */
-.faq-item i {
-  color: #00d4d7 !important; /* Ícones em azul claro */
-  font-size: 1.8em;
-  margin-right: 15px;
-}
-
-/* Botão de contato */
-#faq .btn.primary-btn {
-  background-color: #00d4d7 !important; /* Azul claro */
-  color: #fff !important; /* Texto branco */
-  border-radius: 50px !important;
-  padding: 12px 30px;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-#faq .btn.primary-btn:hover {
-  background-color: #00bac1 !important; /* Azul mais escuro */
-  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.4);
-}
-
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centraliza o logo horizontalmente */
-  padding: 10px; /* Adiciona espaço ao redor */
-}
-
-.logo-image {
-  width: 80%;
-  max-width:80px; /* Limita o tamanho máximo do logo */
-  height: auto; /* Mantém as proporções corretas */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
-}
-
-.logo-image:hover {
-  transform: scale(1.1); /* Efeito de zoom no hover */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Sombra no hover */
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centraliza o logo horizontalmente */
-  padding: 10px; /* Adiciona espaço ao redor */
-}
-
-.logo-image {
-  max-width: 200px; /* Limita o tamanho máximo do logo */
-  height: auto; /* Mantém as proporções corretas */
-  border-radius: 15px; /* Arredonda as bordas (ajuste o valor conforme necessário) */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
-}
-
-.logo-image:hover {
-  transform: scale(1.1); /* Efeito de zoom no hover */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Sombra no hover */
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #000000, #111111, #222222, #333333, #444444, #555555, #666666, #777777, #888888);
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden; /* Remove rolagem horizontal */
-}
-
-section {
-  background: transparent; /* Remove qualquer fundo das seções */
-  color: #ffffff;
-  padding: 50px 20px;
-}
-
-header,
-footer {
-  background: transparent; /* Mantém o gradiente contínuo */
-  color: #ffffff;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-button,
-a {
-  text-decoration: none;
-  outline: none;
-  transition: all 0.3s ease-in-out; /* Transição suave */
-}
-
-button:hover,
-a:hover {
-  opacity: 0.8;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  color: #ffffff;
-}
-
-p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-
-/* Meu Tchutchuco, abaixo está o CSS ajustado para manter um degradê de preto 
-   do topo ao rodapé em toda a página, removendo fundos individuais das seções 
-   e garantindo a continuidade do gradiente. */
-
-/* ===== Reset ou ajustes gerais ===== */
-
-/* ===== Gradiente preto contínuo do topo ao rodapé ===== */
-/* Meu Tchutchuco, abaixo está o CSS básico para deixar cada section 
-   ocupando 100% da altura da tela em um layout One Page. */
-
-   section {
-    width: 100%;
-    height: 100vh;   /* Cada section ocupa a altura total da viewport */
-    margin: 0;
-    padding: 0;      /* Ajuste de padding, se necessário */
-    box-sizing: border-box;
-    /* Caso deseje alinhamento central de conteúdo, pode incluir:
-       display: flex;
-       align-items: center;
-       justify-content: center;
-    */
-  }
-  
-  /* Exemplo de estilo adicional, se quiser manter o gradiente no body */
-  body {
-    margin: 0;
-    padding: 0;
-    /* Gradiente vertical (exemplo) */
-    background: linear-gradient(to bottom, #000000, #333333);
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-  }
-  
-
-/* ===== Remova fundos de seções e outros elementos 
-   que estejam "competindo" com esse gradiente. ===== */
-section,
-header,
-footer {
-  background: #000000 !important;
-  color: #ffffff;
-}
-
-/* Ajuste seções para não “quebrar” o degradê */
-section {
-  padding: 80px 20px;
-  border-radius: 0; 
-  box-shadow: none; 
-}
-
-/* ===== Navbar ===== */
-
-/* ===== Ajuste de sections específicas ===== */
-#hero-area,
-#benefits,
-#services,
-#faq,
-#sustentabilidade {
-  background: transparent !important; /* Remove qualquer fundo pré-definido. */
-  color: #ffffff;
-}
-
-/* Exemplos de ajustes específicos:
-   Se alguma seção tiver um ID com fundo fixo, force a sobrescrita: */
-#sustentabilidade.sustentabilidade-area {
-  background: transparent !important;
-}
-
-/* Ajuste de links do navbar */
-.navbar-area .navbar-nav .nav-item a {
-  color: #ddd;
-  text-decoration: none;
-  font-size: 1rem;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-.navbar-area .navbar-nav .nav-item a:hover {
-  color: #00d4d7; /* Destaque no hover */
-}
-
-#sustentabilidade {
-  min-height: 100vh;
-  padding: 60px 0;
-  color: #fff;
-  text-align: center; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Container centralizado e com espaçamento lateral */
-#sustentabilidade .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Título chamativo */
-#sustentabilidade h2 {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-/* Cartões */
-.sust-card {
-  background: rgba(255, 255, 255, 0.05); /* Leve transparência */
-  border-radius: 8px;
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin-bottom: 30px; /* Espaço entre cartões em telas menores */
-}
-.sust-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-/* Ícone grande no topo */
-.sust-card i {
-  font-size: 3em;
-  color: #00d4d7;
-  margin-bottom: 15px;
-}
-
-/* Título do Card */
-.sust-card h5 {
-  color: #fff;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* Texto do Card */
-.sust-card p {
-  color: #ccc;
-  margin-bottom: 0;
-}
-
-/* Botão do WhatsApp com efeito Glow */
-.whatsapp-btn {
-  display: inline-block;
-  margin-top: 40px;
-  background-color: #25d366; /* Verde característico */
-  color: #fff !important;
-  border-radius: 50px;
-  padding: 12px 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0px 0px 10px rgba(37, 211, 102, 0.6);
-}
-
-/* Hover do botão */
-.whatsapp-btn:hover {
-  background-color: #128c7e; /* Tom mais escuro */
-  box-shadow: 0px 0px 18px rgba(18, 140, 126, 0.8);
-  color: #fff !important;
-}
-
-/* Ajustes responsivos simples */
-@media (max-width: 768px) {
-  #sustentabilidade .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .col-md-4 {
-    width: 100%;
-  }
-}
-
-.services-area.services-eight {
-  background: #333;  /* Ajuste conforme desejar */
-  padding: 50px 0;   /* Espaçamento vertical */
-}
-
-/* Título e texto acima dos cards */
-.section-title-five h2 {
-  color: #fff;       /* Título em branco */
-  margin-bottom: 20px;
-}
-.section-title-five p {
-  color: #ccc;       /* Texto secundário em cinza claro */
-  font-size: 1.1em;
-  margin-bottom: 30px;
-}
-
-.services-area.services-eight {
-  background: #333;
+#section {
+  position: relative;
   padding: 50px 0;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  z-index: 1;
 }
 
-/* Título e descrição */
-.section-title-five h2 {
-  color: #fff;
-  margin-bottom: 20px;
-}
-.section-title-five p {
-  color: #ccc;
-  font-size: 1.1em;
-  margin-bottom: 30px;
+section:not(:last-child) {
+  margin-bottom: -15px; /* Reduz o espaço entre as seções para criar a sobreposição */
 }
 
-/* Faz a row ser flex e as colunas também, 
-   para esticar os cards verticalmente */
-.cards-row {
-  /* Se quiser, poderia remover o g-4 e usar aqui um gap manual,
-     mas vamos manter g-4 do Bootstrap. */
-}
-.cards-row .col-md-6.col-lg-4.d-flex {
-  display: flex;         /* Garantir que cada coluna seja flex container */
-  align-items: stretch;  /* Estica o card à altura total da linha */
-}
-
-/* Card principal */
-.service-card {
-  background: #444;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;              /* Torna o card flex */
-  flex-direction: column;     /* Conteúdo em coluna */
-  justify-content: space-between; /* Espaça icone + texto + etc */
-  width: 100%;                /* Para ocupar toda a largura do container flex */
-}
-
-/* Efeito hover */
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Ícone no topo */
-.service-icon .icon-wrapper {
-  width: 50px;
-  height: 50px;
-  background: #00d4d7;
-  border-radius: 50%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.service-icon .icon-wrapper i {
-  font-size: 1.5em;
-  color: #000;
-}
-
-/* Texto do card */
-.service-content {
-  margin-top: 10px;
-}
-.service-content .quote-text {
-  color: #ddd;
-  font-size: 1em;
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-.service-content .author {
-  color: #fff;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-/* Responsividade simples */
-@media (max-width: 767px) {
-  .service-card {
-    margin-bottom: 20px;
-  }
-  .section-title-five h2 {
-    font-size: 1.5rem;
-  }
-}
-
-* Navbar Styling */
 .navbar-area {
-  background-color: #000; /* Fundo preto da navbar */
-  padding: 10px 0;
-}
-
-.navbar .nav-link {
-  color: #ccc;
-  transition: color 0.3s ease-in-out;
-}
-
-.navbar .nav-link:hover {
-  color: #00d4d7;
-}
-
-.navbar .logo-image {
-  max-height: 60px;
-  border-radius: 8px;
-  background: #fff; /* Fundo branco no logo */
-  padding: 5px; /* Espaço interno */
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Destaque leve */
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.navbar .logo-image:hover {
-  transform: scale(1.1); /* Zoom leve ao passar o mouse */
-  box-shadow: 0 4px 10px rgba(0, 212, 215, 0.4); /* Sombra azul clara */
-}
-
-/* Toggler button */
-.navbar-toggler {
-  border: none;
-  outline: none;
-}
-
-.toggler-icon {
-  background-color: #00d4d7;
-  height: 3px;
-  width: 25px;
-  margin: 4px 0;
-  display: block;
-  transition: background-color 0.3s;
-}
-
-.toggler-icon:hover {
-  background-color: #fff;
-}
-
-.btn-whatsapp {
-  background-color: #25d366; /* Cor verde do WhatsApp */
-  color: #fff; /* Cor do texto */
-  padding: 15px 30px; /* Espaçamento interno */
-  border-radius: 50px; /* Borda arredondada */
-  font-weight: bold; /* Texto em negrito */
-  text-decoration: none; /* Remove o sublinhado */
-  display: inline-block; /* Botão inline */
-  margin-top: 30px; /* Espaçamento superior */
-  transition: all 0.3s ease; /* Suaviza transições */
-  box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.3); /* Sombra do botão */
-}
-
-.btn-whatsapp:hover {
-  background-color: #1ebe5b; /* Cor mais escura ao passar o mouse */
-  box-shadow: 0px 6px 20px rgba(37, 211, 102, 0.4); /* Aumenta a sombra */
-  transform: scale(1.05); /* Aumenta levemente o botão */
+  background-color: #000; /* Fundo preto sólido */
+  box-shadow: none; /* Remove sombra */
+  padding: 10px 0; /* Espaçamento consistente */
+  position: sticky; /* Fixa no topo ao rolar a página */
+  top: 0;
+  z-index: 10; /* Garante que a navbar fique acima das outras seções */
 }

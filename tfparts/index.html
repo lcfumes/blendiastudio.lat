@@ -25,84 +25,18 @@
 
   <!--====== gLightBox css ======-->
   <link rel="stylesheet" href="assets/css/glightbox.min.css" />
-s
 
   <link rel="stylesheet" href="style.css" />
-    <style>
-    /* Imagens com efeito de hover */
-    .image-wrapper img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
-    
-    /* Botão com animação */
-    .primary-btn:hover {
-      background-color: #007f80;
-      color: #fff;
-      box-shadow: 0px 6px 18px rgba(0, 127, 128, 0.5);
-    }
-
-    /* Estilo para criar efeito de sobreposição */
-    section {
-      position: relative;
-      z-index: 1;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-      margin-bottom: -30px; /* Ajuste este valor conforme necessário */
-      background-color: #fff; /* Cor de fundo para destacar a sobreposição */
-      padding: 30px;
-    }
-
-    #hero-area {
-        padding-top: 100px; /* Reduz o espaço superior */
-    }
-
-    #hero-area {
-      z-index: 3;
-    }
-
-    #benefits {
-      z-index: 2;
-    }
-
-    #services {
-      background: linear-gradient(to bottom, #333, #222);
-      z-index: 1;
-    }
-
-    #faq {
-        z-index: 2;
-    }
-
-    body, html {
-        overflow-x: hidden; /* Evita a barra de rolagem horizontal */
-    }
-
-    .whatsapp-btn {
-        background-color: #25d366; /* Cor verde do WhatsApp */
-        color: #fff;
-        padding: 15px 30px;
-        border-radius: 50px;
-        font-weight: bold;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 30px;
-        transition: all 0.3s ease;
-        box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.3); /* Sombra leve */
-    }
-
-    .whatsapp-btn:hover {
-        background-color: #128c7e; /* Tom mais escuro de verde para o hover */
-        box-shadow: 0px 6px 18px rgba(37, 211, 102, 0.5); /* Sombra mais intensa no hover */
-        color: #fff;
-    }
-
-    .whatsapp-btn i {
-        margin-right: 8px;
-        font-size: 1.2em;
-    }
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+  section {
+  background: transparent !important; /* Garantir transparência */
+  color: inherit; /* Mantém a cor do texto */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  z-index: 1;
+}
   </style>
+    
 </head>
 
 <body>
@@ -112,51 +46,62 @@ s
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg">
             <div class="logo-container">
-              <!-- Novo estilo para o logo -->
+              <!-- Logo -->
               <a href="#">
-                <img src="assets/images/logo.png" alt="TF Logo" class="logo-image" />
+                <img src="assets/images/logo.png" alt="TF Logo" class="logo-image" 
+                  style="
+                    max-height: 50px; 
+                    border-radius: 10px; 
+                    padding: 5px; 
+                    background-color: #fff; 
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);" />
               </a>
             </div>
-  
+
+            <!-- Botão de colapso -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
-              aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="toggler-icon"></span>
-              <span class="toggler-icon"></span>
-              <span class="toggler-icon"></span>
+              aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+              <span class="toggler-icon" style="background-color: #00d4d7; display: block; width: 30px; height: 3px; margin-bottom: 5px;"></span>
+              <span class="toggler-icon" style="background-color: #00d4d7; display: block; width: 30px; height: 3px; margin-bottom: 5px;"></span>
+              <span class="toggler-icon" style="background-color: #00d4d7; display: block; width: 30px; height: 3px;"></span>
             </button>
-  
-            <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarNine">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="page-scroll active" href="#hero-area">Home</a>
+                  <a class="nav-link page-scroll active" href="#hero-area" style="color: #fff;">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="page-scroll" href="#benefits">Benefícios</a>
+                  <a class="nav-link page-scroll" href="#about" style="color: #fff;">Benefícios</a>
                 </li>
                 <li class="nav-item">
-                  <a class="page-scroll" href="#services">Depoimentos</a>
+                  <a class="nav-link page-scroll" href="#services" style="color: #fff;">Depoimentos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="page-scroll" href="#sustentabilidade">Sustentabilidade</a>
+                  <a class="nav-link page-scroll" href="#pricing" style="color: #fff;">Sustentabilidade</a>
                 </li>
                 <li class="nav-item">
-                  <a class="page-scroll" href="#faq">FAQ</a>
+                  <a class="nav-link page-scroll" href="#blog" style="color: #fff;">FAQ</a>
                 </li>
               </ul>
             </div>
-  
-            <div class="navbar-btn d-none d-lg-inline-block">
-              <a class="menu-bar" href="#side-menu-left"><i class="lni lni-menu"></i></a>
+
+            <!-- Menu lateral -->
+            <div class="navbar-btn d-lg-none">
+              
             </div>
+            
           </nav>
         </div>
       </div>
     </div>
   </section>
   
+  
 
 
-  <section id="hero-area" class="header-area header-eight">
+<section id="hero-area" class="header-area header-eight section-transparent">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-12 col-12">
@@ -199,229 +144,322 @@ s
       </div>
     </div>
   </section>
-  <section id="benefits" class="benefits-area" style="padding: 80px 0;">
+ 
+  <section class="about-area about-five section-transparent" id="about">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 col-md-12 col-12">
-          <div class="benefits" style="padding-right: 30px;">
-            <h2 style="font-size: 2.8em; font-weight: 800; color: #00d4d7; margin-bottom: 20px; line-height: 1">
-              Transforme Resíduos <br><span style="color: #fff;">em Lucro e Sustentabilidade</span>
-            </h2>
-            <p style="color: #ddd; font-size: 1.2em; line-height: 1.8; margin-bottom: 30px;">
-              Converta resíduos em <strong>perfis trapezoidais</strong> e economize até <strong style="color: #00d4d7;">14%</strong> em poliol/isocianato, enquanto ajuda a preservar o meio ambiente.
-            </p>
-            <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
-              <li style="display: flex; margin-bottom: 15px; font-size: 1.1em;">
-                <span style="background-color: #00d4d7; color: #000; font-weight: bold; margin-right: 15px; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 1em;">✔</span>
-                Zero custo com transporte e descarte.
-              </li>
-              <li style="display: flex; align-items-center; margin-bottom: 15px; font-size: 1.1em;">
-                <span style="background-color: #00d4d7; color: #000; font-weight: bold; margin-right: 15px; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 1em;">✔</span>
-                Ambiente limpo, produção eficiente.
-              </li>
-            </ul>
-            <blockquote style="font-size: 1.2em; font-style: italic; background-color: #444; padding: 20px; border-left: 5px solid #00d4d7; color: #ccc;">
-              "3 toneladas de resíduos, que custariam aproximadamente R$ 10.000,00 para descarte, podem ser transformadas em perfis trapezoidais, gerando economia de até R$ 60.000,00."
-            </blockquote>
-            <div class="text-center">
-            <a href="https://wa.me/5511999999999" class="btn-whatsapp">
-              <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2em;"></i> Fale Conosco Agora
-          </a>
-        </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-6 col-md-12 col-12">
-          <div class="image-wrapper d-flex flex-wrap align-items-start justify-content-center gap-3">
+        <div class="col-lg-6 col-12">
+          <div class="about-image-five">
+            <svg class="shape" width="106" height="134" viewBox="0 0 106 134" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="1.66654" cy="1.66679" r="1.66667" fill="#DADADA" />
+              <circle cx="1.66654" cy="16.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="1.66654" cy="31.0001" r="1.66667" fill="#DADADA" />
+              <circle cx="1.66654" cy="45.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="1.66654" cy="60.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="1.66654" cy="88.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="1.66654" cy="117.667" r="1.66667" fill="#DADADA" />
+              <circle cx="1.66654" cy="74.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="1.66654" cy="103" r="1.66667" fill="#DADADA" />
+              <circle cx="1.66654" cy="132" r="1.66667" fill="#DADADA" />
+              <circle cx="16.3333" cy="1.66679" r="1.66667" fill="#DADADA" />
+              <circle cx="16.3333" cy="16.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="16.3333" cy="31.0001" r="1.66667" fill="#DADADA" />
+              <circle cx="16.3333" cy="45.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="16.333" cy="60.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="16.333" cy="88.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="16.333" cy="117.667" r="1.66667" fill="#DADADA" />
+              <circle cx="16.333" cy="74.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="16.333" cy="103" r="1.66667" fill="#DADADA" />
+              <circle cx="16.333" cy="132" r="1.66667" fill="#DADADA" />
+              <circle cx="30.9998" cy="1.66679" r="1.66667" fill="#DADADA" />
+              <circle cx="74.6665" cy="1.66679" r="1.66667" fill="#DADADA" />
+              <circle cx="30.9998" cy="16.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="74.6665" cy="16.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="30.9998" cy="31.0001" r="1.66667" fill="#DADADA" />
+              <circle cx="74.6665" cy="31.0001" r="1.66667" fill="#DADADA" />
+              <circle cx="30.9998" cy="45.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="74.6665" cy="45.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="31" cy="60.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="74.6668" cy="60.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="31" cy="88.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="74.6668" cy="88.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="31" cy="117.667" r="1.66667" fill="#DADADA" />
+              <circle cx="74.6668" cy="117.667" r="1.66667" fill="#DADADA" />
+              <circle cx="31" cy="74.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="74.6668" cy="74.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="31" cy="103" r="1.66667" fill="#DADADA" />
+              <circle cx="74.6668" cy="103" r="1.66667" fill="#DADADA" />
+              <circle cx="31" cy="132" r="1.66667" fill="#DADADA" />
+              <circle cx="74.6668" cy="132" r="1.66667" fill="#DADADA" />
+              <circle cx="45.6665" cy="1.66679" r="1.66667" fill="#DADADA" />
+              <circle cx="89.3333" cy="1.66679" r="1.66667" fill="#DADADA" />
+              <circle cx="45.6665" cy="16.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="89.3333" cy="16.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="45.6665" cy="31.0001" r="1.66667" fill="#DADADA" />
+              <circle cx="89.3333" cy="31.0001" r="1.66667" fill="#DADADA" />
+              <circle cx="45.6665" cy="45.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="89.3333" cy="45.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="45.6665" cy="60.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="89.3333" cy="60.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="45.6665" cy="88.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="89.3333" cy="88.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="45.6665" cy="117.667" r="1.66667" fill="#DADADA" />
+              <circle cx="89.3333" cy="117.667" r="1.66667" fill="#DADADA" />
+              <circle cx="45.6665" cy="74.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="89.3333" cy="74.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="45.6665" cy="103" r="1.66667" fill="#DADADA" />
+              <circle cx="89.3333" cy="103" r="1.66667" fill="#DADADA" />
+              <circle cx="45.6665" cy="132" r="1.66667" fill="#DADADA" />
+              <circle cx="89.3333" cy="132" r="1.66667" fill="#DADADA" />
+              <circle cx="60.3333" cy="1.66679" r="1.66667" fill="#DADADA" />
+              <circle cx="104" cy="1.66679" r="1.66667" fill="#DADADA" />
+              <circle cx="60.3333" cy="16.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="104" cy="16.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="60.3333" cy="31.0001" r="1.66667" fill="#DADADA" />
+              <circle cx="104" cy="31.0001" r="1.66667" fill="#DADADA" />
+              <circle cx="60.3333" cy="45.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="104" cy="45.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="60.333" cy="60.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="104" cy="60.3335" r="1.66667" fill="#DADADA" />
+              <circle cx="60.333" cy="88.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="104" cy="88.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="60.333" cy="117.667" r="1.66667" fill="#DADADA" />
+              <circle cx="104" cy="117.667" r="1.66667" fill="#DADADA" />
+              <circle cx="60.333" cy="74.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="104" cy="74.6668" r="1.66667" fill="#DADADA" />
+              <circle cx="60.333" cy="103" r="1.66667" fill="#DADADA" />
+              <circle cx="104" cy="103" r="1.66667" fill="#DADADA" />
+              <circle cx="60.333" cy="132" r="1.66667" fill="#DADADA" />
+              <circle cx="104" cy="132" r="1.66667" fill="#DADADA" />
+            </svg>
             <img src="assets/images/residuos-02.jpeg" alt="Imagem Quadrada" class="img-fluid shadow" style="width: 45%; border-radius: 15px; transform: scale(1); transition: transform 0.4s;">
             <img src="assets/images/residuos-04.jpg" alt="Imagem Vertical" class="img-fluid shadow" style="width: 45%; border-radius: 15px; transform: scale(1); transition: transform 0.4s;">
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  
-  
+        <div class="col-lg-6 col-12">
+          <div class="about-five-content">
+            <h2 class="main-title fw-bold" style="color: #fff;">Transforme Resíduos <br><span style="color: #00d4d7;">em Lucro e Sustentabilidade</span></h2>
+            <p style="color: #ccc; font-size: 1.2em; line-height: 1.8; margin-bottom: 30px;">
+              Converta resíduos em <strong>perfis trapezoidais</strong> e economize até <strong style="color: #00d4d7;">14%</strong> em poliol/isocianato, enquanto ajuda a preservar o meio ambiente.
+            </p>
+            <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+              <li style="display: flex; margin-bottom: 15px; font-size: 1.1em; color: #ddd;">
+                <span style="background-color: #00d4d7; color: #000; font-weight: bold; margin-right: 15px; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 1em;">✔</span>
+                Zero custo com transporte e descarte.
+              </li>
+              <li style="display: flex; align-items-center; margin-bottom: 15px; font-size: 1.1em; color: #ddd;">
+                <span style="background-color: #00d4d7; color: #000; font-weight: bold; margin-right: 15px; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 1em;">✔</span>
+                Ambiente limpo, produção eficiente.
+              </li>
+            </ul>
+            <blockquote style="font-size: 1em; font-style: italic; background-color: #222; padding: 20px; border-left: 5px solid #00d4d7; color: #ccc;">
+              "3 toneladas de resíduos, que custariam aproximadamente R$ 10.000,00 para descarte, podem ser transformadas em perfis trapezoidais, gerando economia de até R$ 60.000,00."
+            </blockquote>
+            <div class="text-center">
+              <a href="https://wa.me/5511999999999" class="btn-whatsapp" 
+   style="background-color: #25D366; color: #fff; padding: 10px 20px; border-radius: 5px; font-size: 1.2em; text-decoration: none; display: inline-flex; align-items: center; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">
+  <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2em;"></i> Fale Conosco Agora
+</a>
 
-
-  <section id="services" class="services-area services-eight">
-    <div class="container">
-      <div class="section-title-five text-center">
-        <h2 class="fw-bold">O que nossos clientes dizem:</h2>
-        <p>
-          Empresas de diversos setores estão transformando resíduos em economia e sustentabilidade. 
-          Confira abaixo os depoimentos de quem já adotou a solução.
-        </p>
-      </div>
-      <!-- Adicione a classe "cards-row" para controle de altura uniforme -->
-      <div class="row g-4 cards-row">
-        <!-- Card 1 -->
-        <div class="col-md-6 col-lg-4 d-flex">
-          <div class="single-services service-card">
-            <div class="service-icon mb-3">
-              <div class="icon-wrapper">
-                <i class="lni lni-comments"></i>
-              </div>
             </div>
-            <div class="service-content">
-              <p class="quote-text">
-                🗣️ "Reduzimos custos em mais de R$ 50.000,00 por mês e tornamos nossa produção mais sustentável."
-              </p>
-              <p class="author">— Carlos M., Gerente de Produção</p>
-            </div>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="col-md-6 col-lg-4 d-flex">
-          <div class="single-services service-card">
-            <div class="service-icon mb-3">
-              <div class="icon-wrapper">
-                <i class="lni lni-comments"></i>
-              </div>
-            </div>
-            <div class="service-content">
-              <p class="quote-text">
-                🗣️ "O retorno do investimento foi muito mais rápido do que imaginávamos. A reciclagem no local foi revolucionária!"
-              </p>
-              <p class="author">— Mariana R., Diretora Industrial</p>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="col-md-6 col-lg-4 d-flex">
-          <div class="single-services service-card">
-            <div class="service-icon mb-3">
-              <div class="icon-wrapper">
-                <i class="lni lni-comments"></i>
-              </div>
-            </div>
-            <div class="service-content">
-              <p class="quote-text">
-                🗣️ "Adotamos a máquina de reciclagem e agora atingimos nossas metas de ESG, enquanto economizamos em matéria-prima."
-              </p>
-              <p class="author">— Ricardo L., Coordenador de ESG</p>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-5">
-          <a href="https://wa.me/5511999999999" class="btn-whatsapp">
-            <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2em;"></i> Fale Conosco Agora
-        </a>
-      </div>
-      </div>
-      
-    </div>
-  </section>
-  
-  <section id="sustentabilidade">
-    <div class="container">
-      <h2>Como a Sustentabilidade da TF PARTS faz a diferença?</h2>
-      
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-md-4">
-          <div class="sust-card">
-            <i class="lni lni-world"></i>
-            <h5>Eliminação de Resíduos</h5>
-            <p>Converta 100% dos resíduos de poliuretano em novos materiais.</p>
-          </div>
-        </div>
-  
-        <!-- Card 2 -->
-        <div class="col-md-4">
-          <div class="sust-card">
-            <i class="lni lni-stats-up"></i>
-            <h5>Redução de Custos</h5>
-            <p>Economia direta na compra de matéria-prima com ROI rápido.</p>
-          </div>
-        </div>
-  
-        <!-- Card 3 -->
-        <div class="col-md-4">
-          <div class="sust-card">
-            <i class="lni lni-leaf"></i>
-            <h5>Sustentabilidade</h5>
-            <p>Contribua para práticas ambientais responsáveis no setor.</p>
           </div>
         </div>
       </div>
-  
-      <!-- Botão centralizado para WhatsApp -->
-      <div class="text-center mt-5">
-      <a href="https://wa.me/5511999999999" class="btn-whatsapp">
-        <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2em;"></i> Fale Conosco Agora
-    </a>
-    </div>
-    
-    </div>
-  </section>
-  
-  
-  
-  <section id="faq" class="faq-area py-5" style="background-color: #111;">
-    <div class="container">
-        <h2 class="text-center mb-5" style="font-weight: bold; color: #00d4d7;">Perguntas Frequentes</h2>
-        <div class="row g-4">
-            <!-- FAQ Item 1 -->
-            <div class="col-md-6">
-                <div class="faq-item p-4 shadow-sm" style="border-radius: 10px; background-color: #222; border: 1px solid #333;">
-                    <div class="d-flex align-items-start">
-                        
-                        <div>
-                            <h5 style="font-weight: bold; color: #00d4d7;">Como a reciclagem reduz custos?</h5>
-                            <p style="color: #aaa;">Elimina custos com descarte e reaproveita resíduos como matéria-prima, reduzindo em até 14% a compra de novos insumos.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- FAQ Item 2 -->
-            <div class="col-md-6">
-                <div class="faq-item p-4 shadow-sm" style="border-radius: 10px; background-color: #222; border: 1px solid #333;">
-                    <div class="d-flex align-items-start">
-                        
-                        <div>
-                            <h5 style="font-weight: bold; color: #00d4d7;">Quais resíduos podem ser reciclados?</h5>
-                            <p style="color: #aaa;">Resíduos de telhas isotérmicas e painéis feitos com poliuretano (PU) ou poliisocianurato (PIR).</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- FAQ Item 3 -->
-            <div class="col-md-6">
-                <div class="faq-item p-4 shadow-sm" style="border-radius: 10px; background-color: #222; border: 1px solid #333;">
-                    <div class="d-flex align-items-start">
-                        
-                        <div>
-                            <h5 style="font-weight: bold; color: #00d4d7;">Preciso adaptar minha produção para a máquina?</h5>
-                            <p style="color: #aaa;">Não. A máquina é projetada para integração simples e rápida.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- FAQ Item 4 -->
-            <div class="col-md-6">
-                <div class="faq-item p-4 shadow-sm" style="border-radius: 10px; background-color: #222; border: 1px solid #333;">
-                    <div class="d-flex align-items-start">
-                       
-                        <div>
-                            <h5 style="font-weight: bold; color: #00d4d7;">Qual o retorno financeiro esperado?</h5>
-                            <p style="color: #aaa;">Economia significativa com ROI em curto prazo devido à redução nos custos de descarte e compra de matéria-prima.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <hr class="my-4" style="border-color: #333;">
-            <p class="mb-4" style="font-size: 1.1em; color: #aaa;">Está pronto para economizar e reciclar? Fale conosco agora mesmo!</p>
-            <a href="https://wa.me/5511999999999" class="btn-whatsapp">
-              <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2em;"></i> Fale Conosco Agora
-          </a>
-          
-        </div>
     </div>
 </section>
+
+  
+  
+  
+
+<section id="services" class="services-area services-eight section-transparent">
+  <!-- Título e introdução -->
+  <div class="container">
+      <div class="section-title-five text-center" style="color: #fff;">
+          <h2 class="fw-bold" style="color: #00d4d7;">O que nossos clientes dizem:</h2>
+          <p style="color: #ccc;">
+              Empresas de diversos setores estão transformando resíduos em economia e sustentabilidade. 
+              Confira abaixo os depoimentos de quem já adotou a solução.
+          </p>
+      </div>
+
+      <!-- Depoimentos em cards -->
+      <div class="row g-4 cards-row">
+          <!-- Depoimento 1 -->
+          <div class="col-md-6 col-lg-4 d-flex">
+              <div class="single-services service-card" style="background-color: #111; border-radius: 10px; padding: 20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);">
+                  <div class="service-content" style="color: #ddd;">
+                      <p class="quote-text" style="font-size: 1.2em; font-style: italic;">
+                          🗣️ "Reduzimos custos em mais de R$ 50.000,00 por mês e tornamos nossa produção mais sustentável."
+                      </p>
+                      <p class="author" style="font-weight: bold; color: #00d4d7;">— Carlos M., Gerente de Produção</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div class="col-md-6 col-lg-4 d-flex">
+              <div class="single-services service-card" style="background-color: #111; border-radius: 10px; padding: 20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);">
+                  <div class="service-content" style="color: #ddd;">
+                      <p class="quote-text" style="font-size: 1.2em; font-style: italic;">
+                          🗣️ "O retorno do investimento foi muito mais rápido do que imaginávamos. A reciclagem no local foi revolucionária!"
+                      </p>
+                      <p class="author" style="font-weight: bold; color: #00d4d7;">— Mariana R., Diretora Industrial</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="col-md-6 col-lg-4 d-flex">
+              <div class="single-services service-card" style="background-color: #111; border-radius: 10px; padding: 20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);">
+                  <div class="service-content" style="color: #ddd;">
+                      <p class="quote-text" style="font-size: 1.2em; font-style: italic;">
+                          🗣️ "Adotamos a máquina de reciclagem e agora atingimos nossas metas de ESG, enquanto economizamos em matéria-prima."
+                      </p>
+                      <p class="author" style="font-weight: bold; color: #00d4d7;">— Ricardo L., Coordenador de ESG</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Botão de contato -->
+      <div class="text-center mt-5">
+        <a href="https://wa.me/5511999999999" class="btn-whatsapp" 
+        style="background-color: #25D366; color: #fff; padding: 10px 20px; border-radius: 5px; font-size: 1.2em; text-decoration: none; display: inline-flex; align-items: center; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">
+       <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2em;"></i> Fale Conosco Agora
+     </a>
+     
+      </div>
+  </div>
+</section>
+
+
+  
+<section id="pricing" class="pricing-area pricing-fourteen section-transparent">
+  <div class="container">
+      <div class="section-title-five text-center">
+          <h2 class="fw-bold" style="color: #00d4d7;">Como a Sustentabilidade da TF PARTS faz a diferença?</h2>
+      </div>
+
+      <div class="row">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6 col-12">
+              <div class="pricing-style-fourteen" style="background-color: #111; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);">
+                  <div class="table-head">
+                      <div class="service-icon" style="font-size: 3em; color: #00d4d7; margin-bottom: 15px;">
+                        <i class="fas fa-recycle"></i>
+
+
+                      </div>
+                      <h5 class="title" style="color: #fff; font-size: 1.5em;">Eliminação de Resíduos</h5>
+                      <p style="color: #ccc; font-size: 1.1em;">Converta 100% dos resíduos de poliuretano em novos materiais.</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6 col-12">
+              <div class="pricing-style-fourteen" style="background-color: #111; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);">
+                  <div class="table-head">
+                      <div class="service-icon" style="font-size: 3em; color: #00d4d7; margin-bottom: 15px;">
+                        <i class="lni lni-dollar"></i>
+                      </div>
+                      <h5 class="title" style="color: #fff; font-size: 1.5em;">Redução de Custos</h5>
+                      <p style="color: #ccc; font-size: 1.1em;">Economia direta na compra de matéria-prima com ROI rápido.</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6 col-12">
+              <div class="pricing-style-fourteen" style="background-color: #111; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);">
+                  <div class="table-head">
+                      <div class="service-icon" style="font-size: 3em; color: #00d4d7; margin-bottom: 15px;">
+                          <i class="lni lni-leaf"></i>
+                      </div>
+                      <h5 class="title" style="color: #fff; font-size: 1.5em;">Sustentabilidade</h5>
+                      <p style="color: #ccc; font-size: 1.1em;">Contribua para práticas ambientais responsáveis no setor.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Botão centralizado para WhatsApp -->
+      <div class="text-center mt-5">
+        <a href="https://wa.me/5511999999999" class="btn-whatsapp" 
+        style="background-color: #25D366; color: #fff; padding: 10px 20px; border-radius: 5px; font-size: 1.2em; text-decoration: none; display: inline-flex; align-items: center; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">
+       <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2em;"></i> Fale Conosco Agora
+     </a>
+     
+      </div>
+  </div>
+</section>
+
+  
+<div id="blog" class="latest-news-area section section-transparent">
+  <!-- Título da seção -->
+  <div class="section-title-five">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="content text-center">
+                      <h2 class="fw-bold" style="color: #fff;">Economize e Recicle com Inteligência</h2>
+                      <p style="color: #ccc;">
+                          Descubra como a sustentabilidade e a reciclagem podem transformar sua produção. Veja abaixo as dúvidas mais comuns.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Conteúdo das FAQs -->
+  <div class="container">
+      <div class="row">
+          <!-- FAQ Item 1 -->
+          <div class="col-lg-4 col-md-6 col-12">
+              <div class="single-news p-4 shadow-sm" style="border-radius: 10px; background-color: #111; border: 1px solid #333;">
+                  <h5 style="font-weight: bold; color: #00d4d7;">Como a reciclagem reduz custos?</h5>
+                  <p style="color: #ccc;">Elimina custos com descarte e reaproveita resíduos como matéria-prima, reduzindo em até 14% a compra de novos insumos.</p>
+              </div>
+          </div>
+          <!-- FAQ Item 2 -->
+          <div class="col-lg-4 col-md-6 col-12">
+              <div class="single-news p-4 shadow-sm" style="border-radius: 10px; background-color: #111; border: 1px solid #333;">
+                  <h5 style="font-weight: bold; color: #00d4d7;">Quais resíduos podem ser reciclados?</h5>
+                  <p style="color: #ccc;">Resíduos de telhas isotérmicas e painéis feitos com poliuretano (PU) ou poliisocianurato (PIR).</p>
+              </div>
+          </div>
+          <!-- FAQ Item 3 -->
+          <div class="col-lg-4 col-md-6 col-12">
+              <div class="single-news p-4 shadow-sm" style="border-radius: 10px; background-color: #111; border: 1px solid #333;">
+                  <h5 style="font-weight: bold; color: #00d4d7;">Preciso adaptar minha produção para a máquina?</h5>
+                  <p style="color: #ccc;">Não. A máquina é projetada para integração simples e rápida.</p>
+              </div>
+          </div>
+          <!-- FAQ Item 4 -->
+          <div class="col-lg-4 col-md-6 col-12">
+              <div class="single-news p-4 shadow-sm" style="border-radius: 10px; background-color: #111; border: 1px solid #333;">
+                  <h5 style="font-weight: bold; color: #00d4d7;">Qual o retorno financeiro esperado?</h5>
+                  <p style="color: #ccc;">Economia significativa com ROI em curto prazo devido à redução nos custos de descarte e compra de matéria-prima.</p>
+              </div>
+          </div>
+      </div>
+      <!-- Botão de contato -->
+      <div class="text-center mt-5">
+          <hr class="my-4" style="border-color: #333;">
+          <p class="mb-4" style="font-size: 1.1em; color: #ccc;">Está pronto para economizar e reciclar? Fale conosco agora mesmo!</p>
+          <a href="https://wa.me/5511999999999" class="btn-whatsapp" 
+   style="background-color: #25D366; color: #fff; padding: 10px 20px; border-radius: 5px; font-size: 1.2em; text-decoration: none; display: inline-flex; align-items: center; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">
+  <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2em;"></i> Fale Conosco Agora
+</a>
+
+      </div>
+  </div>
+</div>
+
+
 
   
   
