@@ -2025,6 +2025,21 @@ p {
   }
 }
 
+section:not(.navbar-area) {
+  background: transparent !important; /* Garantir transparência */
+  color: inherit; /* Mantém a cor do texto */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  z-index: 1;
+}
+.navbar-area {
+  background-color: #000; /* Fundo preto sólido */
+  box-shadow: none; /* Remove sombra */
+  padding: 10px 0; /* Espaçamento consistente */
+  position: sticky; /* Fixa no topo ao rolar a página */
+  top: 0;
+  z-index: 10; /* Garante que a navbar fique acima das outras seções */
+}
+
 #section {
   position: relative;
   padding: 50px 0;
@@ -2036,11 +2051,3 @@ section:not(:last-child) {
   margin-bottom: -15px; /* Reduz o espaço entre as seções para criar a sobreposição */
 }
 
-.navbar-area {
-  background-color: #000; /* Fundo preto sólido */
-  box-shadow: none; /* Remove sombra */
-  padding: 10px 0; /* Espaçamento consistente */
-  position: sticky; /* Fixa no topo ao rolar a página */
-  top: 0;
-  z-index: 10; /* Garante que a navbar fique acima das outras seções */
-}
