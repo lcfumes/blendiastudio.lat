@@ -1,11 +1,4 @@
-/* style.css */
 
-body {
-    font-family: Arial, sans-serif; /* Escolha uma fonte similar à da imagem */
-    margin: 0;
-    padding: 0;
-    color: #333; /* Cor de texto padrão, ajuste se necessário */
-}
 
 /* Estilos do Navbar */
 .navbar {
@@ -47,31 +40,44 @@ body {
 }
 
 
-/* Estilos da Home Section */
-.home {
-    display: flex;
-    align-items: center; /* Alinha verticalmente os itens */
-    margin: 0 auto; /* Centraliza a seção home na página */
+.swiper-slide.section-one {
+    display: flex;        /*  <-- Aplica flexbox ao slide */
+    flex-direction: row; /*  <-- Garante que seja horizontal (já é o padrão, mas é bom explicitar) */
+    align-items: center;  /*  <-- Alinhamento vertical */
+    justify-content: space-between; /* Distribui o espaço (pode ajustar) */
+    padding: 20px;       /*  <-- Adicione padding aqui, se necessário */
+    /* Outros estilos específicos para a section-one, se houver */
+}
+/* Garante que o conteudo fique sempre ao lado da imagem */
+.swiper-slide.section-one .home-text,
+.swiper-slide.section-one .home-image {
+    flex: 1; /*  Cada um ocupa metade do espaço (ajuste conforme necessário) */
+    box-sizing: border-box; /*  Inclui padding e borda no cálculo do tamanho */
 }
 
+.swiper-slide.section-one .home-image{
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Estilos para o texto (mantenha/ajuste os existentes)*/
 .home-text {
-    flex: 1; /* O texto ocupa a maior parte do espaço disponível */
-    padding-right: 20px; /* Espaçamento entre o texto e a imagem */
-    margin-left: 40px;
+  padding-right: 20px;
+  margin-left: 40px;
 }
-
 .home-text h1 {
-    font-size: 2.5em; /* Tamanho do título principal */
-    margin-bottom: 20px; /* Espaçamento abaixo do título principal */
-    line-height: 1.2; /* Ajuste a altura da linha se necessário */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .home-text h2 {
-    font-size: 1.5em; /* Tamanho do subtítulo */
-    color: #555; /* Cor do subtítulo, ajuste se necessário */
-    line-height: 1.4; /* Ajuste a altura da linha se necessário */
-    margin-bottom: 30px; /* Espaçamento abaixo do subtítulo */
+    font-size: 1.5em;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 30px;
 }
+
 
 .order-now-button {
     background-color: #007bff; /* Cor do botão "ORDER NOW", use a cor exata se souber */
@@ -131,7 +137,7 @@ body {
     font-size: 1.0em; /* Tamanho do parágrafo */
     color: #555; /* Cor do parágrafo, ajuste se necessário */
     line-height: 1.6; /* Ajuste a altura da linha se necessário */
-    margin-bottom: 30px; /* Espaçamento abaixo do parágrafo */
+    margin-bottom: 10px; /* Espaçamento abaixo do parágrafo */
 }
 
 .benefits-list {
@@ -189,7 +195,7 @@ body {
     font-size: 2.5em; /* Tamanho do preço "ONLY $100" */
     color: black; /* Cor do preço */
     font-weight: bold; /* Deixa o preço em negrito */
-    margin-bottom: 15px; /* Espaçamento abaixo do preço */
+    margin-bottom: 10px; /* Espaçamento abaixo do preço */
     text-align: right; /* Garante alinhamento à direita */
 }
 
@@ -281,7 +287,7 @@ body {
     font-size: 1.05em;
     color: #555;
     line-height: 1.65;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     font-weight: 400;
 }
 
@@ -316,7 +322,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 40px;
     padding-left: 3px;
 }
 
@@ -398,7 +403,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px; /* Espaçamento inferior para o cabeçalho */
+    margin-bottom: 10px; /* Espaçamento inferior para o cabeçalho */
 }
 
 .official-partners {
