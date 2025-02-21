@@ -192,6 +192,7 @@
 
 
 .price-text {
+    margin-top: 5px !important; /* Espaçamento acima do preço "ONLY $100" */
     font-size: 2.5em; /* Tamanho do preço "ONLY $100" */
     color: black; /* Cor do preço */
     font-weight: bold; /* Deixa o preço em negrito */
