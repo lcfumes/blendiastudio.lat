@@ -458,7 +458,6 @@
     padding: 0 10px;
     background-color: #f2f2f2; /* Fundo cinza claro para os boxes dos passos */
     border-radius: 10px;
-    display: flex;
     align-items: center;
 }
 
@@ -477,7 +476,7 @@
 
 .step-icon {
     height: 60px; /* Ajuste a altura dos ícones conforme necessário */
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .step-ico {
