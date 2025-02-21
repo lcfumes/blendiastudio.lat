@@ -1,0 +1,975 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif; /* Escolha uma fonte similar à da imagem */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Cor de texto padrão, ajuste se necessário */
+}
+
+/* Estilos do Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.logo img {
+    height: 30px; /* Ajuste a altura do logo se necessário */
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.login-button {
+    background-color: black; /* Cor do botão Login */
+    color: white; /* Cor do texto do botão Login */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 14px; /* Tamanho da fonte do botão Login */
+}
+
+.cart-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-button img {
+    height: 40px; /* Ajuste a altura do ícone do carrinho se necessário */
+}
+
+
+/* Estilos da Home Section */
+.home {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    margin: 0 auto; /* Centraliza a seção home na página */
+}
+
+.home-text {
+    flex: 1; /* O texto ocupa a maior parte do espaço disponível */
+    padding-right: 20px; /* Espaçamento entre o texto e a imagem */
+    margin-left: 40px;
+}
+
+.home-text h1 {
+    font-size: 2.5em; /* Tamanho do título principal */
+    margin-bottom: 20px; /* Espaçamento abaixo do título principal */
+    line-height: 1.2; /* Ajuste a altura da linha se necessário */
+}
+
+.home-text h2 {
+    font-size: 1.5em; /* Tamanho do subtítulo */
+    color: #555; /* Cor do subtítulo, ajuste se necessário */
+    line-height: 1.4; /* Ajuste a altura da linha se necessário */
+    margin-bottom: 30px; /* Espaçamento abaixo do subtítulo */
+}
+
+.order-now-button {
+    background-color: #007bff; /* Cor do botão "ORDER NOW", use a cor exata se souber */
+    color: white; /* Cor do texto do botão "ORDER NOW" */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em; /* Tamanho da fonte do botão "ORDER NOW" */
+    font-weight: bold;
+}
+
+.home-image {
+    flex: 1; /* A imagem ocupa a parte restante do espaço */
+    text-align: right; /* Alinha a imagem à direita */
+}
+
+.pc-img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.illustrative-image-text {
+    font-size: 0.8em; /* Tamanho da fonte do texto "Illustrative Image" */
+    color: #777; /* Cor do texto "Illustrative Image" */
+    text-align: right; /* Alinha o texto à direita */
+    margin-top: 10px; /* Espaçamento acima do texto */
+}
+
+/* style.css - Adicione estes estilos ao seu arquivo CSS existente */
+
+/* Estilos da Section Two */
+.section-two {
+    background-color: #f8f8f8; /* Cor de fundo da seção, ajuste se necessário */
+    padding: 60px 30px; /* Ajuste o padding conforme necessário */
+}
+
+.section-two-content {
+    display: flex;
+    margin: 0 auto; /* Centraliza a seção na página */
+    align-items: flex-start; /* Alinha os itens no topo */
+}
+
+.section-two-text {
+    flex: 1.5; /* O texto ocupa mais espaço que a imagem */
+    padding-right: 60px; /* Espaçamento entre o texto e a imagem */
+}
+
+.section-two-text h2 {
+    font-size: 2.0em; /* Tamanho do título da seção */
+    color: black; /* Cor do título, ajuste se necessário */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    line-height: 1.3; /* Ajuste a altura da linha se necessário */
+}
+
+.section-two-text p {
+    font-size: 1.0em; /* Tamanho do parágrafo */
+    color: #555; /* Cor do parágrafo, ajuste se necessário */
+    line-height: 1.6; /* Ajuste a altura da linha se necessário */
+    margin-bottom: 30px; /* Espaçamento abaixo do parágrafo */
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column; /* Organiza os botões verticalmente */
+}
+
+.benefit-button {
+    background-color: #ffffff; /* Cor de fundo dos botões de benefícios */
+    color: #333; /* Cor do texto dos botões de benefícios */
+    border: 1px solid #ddd; /* Borda dos botões de benefícios */
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.0em; /* Tamanho da fonte dos botões de benefícios */
+    text-align: left; /* Alinha o texto à esquerda dentro dos botões */
+    margin-bottom: 10px; /* Espaçamento entre os botões de benefícios */
+    width: 100%; /* Largura total para os botões */
+}
+
+.section-two-image-and-price {
+    flex: 1; /* A imagem e preço ocupam o espaço restante */
+    display: flex;
+    flex-direction: column; /* Organiza imagem e preço/botão verticalmente */
+    align-items: flex-end; /* Alinha os itens à direita */
+}
+
+
+.phone-image {
+    text-align: right; /* Alinha a imagem à direita */
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem do celular */
+}
+
+.phone-img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.illustrative-image-text {
+    font-size: 0.7em; /* Tamanho da fonte do texto "Illustrative Image" */
+    color: #777; /* Cor do texto "Illustrative Image" */
+    text-align: right; /* Alinha o texto à direita */
+    margin-top: 5px; /* Espaçamento acima do texto */
+}
+
+
+.price-and-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha o preço e o botão à direita */
+}
+
+
+.price-text {
+    font-size: 2.5em; /* Tamanho do preço "ONLY $100" */
+    color: black; /* Cor do preço */
+    font-weight: bold; /* Deixa o preço em negrito */
+    margin-bottom: 15px; /* Espaçamento abaixo do preço */
+    text-align: right; /* Garante alinhamento à direita */
+}
+
+.get-yours-button {
+    background-color: #28a745; /* Cor verde do botão "GET YOURS NOW!", use a cor exata se souber */
+    color: white; /* Cor do texto do botão "GET YOURS NOW" */
+    border: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em; /* Tamanho da fonte do botão "GET YOURS NOW" */
+    font-weight: bold;
+    display: flex; /* Para alinhar o texto e o ícone */
+    align-items: center; /* Alinhamento vertical */
+}
+
+.arrow-icon::after {
+    content: '\203A'; /* Caractere Unicode para seta apontando para a direita › */
+    display: inline-block;
+    margin-left: 10px; /* Espaçamento entre o texto e a seta */
+    font-size: 1.2em; /* Tamanho da seta, ajuste se necessário */
+}
+
+/* style.css - SUBSTITUA COMPLETAMENTE o bloco CSS da section-two com este código CORRIGIDO */
+
+/* Estilos da Section Two - LAYOUT CORRIGIDO: Celular ESQUERDA, Texto DIREITA, Botões AO LADO do Celular */
+.section-two {
+    background-color: #f8f8f8;
+    padding: 60px 30px;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.section-two-content {
+    display: flex; /* Flex container para o layout principal: celular/texto */
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start; /* Alinha os itens no topo */
+}
+
+/* Container para a IMAGEM DO CELULAR e os BOTÕES (lado a lado) */
+.section-two-image-and-buttons {
+    display: flex; /* Flex container para IMAGEM e BOTÕES */
+    flex-direction: row; /* Alinha IMAGEM e BOTÕES em LINHA (horizontal) */
+    align-items: center; /* Alinha verticalmente IMAGEM e BOTÕES */
+    width: 55%;
+}
+
+.phone-image {
+    text-align: right;
+    margin-bottom: 0; /* Remove margem inferior para alinhar com os botões */
+    margin-right: 25px; /* Espaço entre o celular e os botões */
+}
+
+.phone-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.illustrative-image-text {
+    font-size: 0.7em;
+    color: #777;
+    text-align: right;
+    margin-top: 7px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column; /* Botões em coluna */
+}
+
+
+.section-two-text {
+    flex: 1; /* Texto ocupa o espaço restante à direita */
+}
+
+.section-two-text h2 {
+    font-size: 2.4em;
+    color: black;
+    margin-bottom: 20px;
+    line-height: 1.05;
+    font-weight: bold;
+    letter-spacing: -0.01em;
+}
+
+.section-two-text p {
+    font-size: 1.05em;
+    color: #555;
+    line-height: 1.65;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+
+.benefit-button {
+    background-color: #f8f8f8;
+    color: #333;
+    border: 2.2px solid #c7c7c7;
+    padding: 11px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.0em;
+    text-align: left;
+    margin-bottom: 9px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 3px #e0e0e0;
+}
+
+.check-icon::before {
+    content: '\2713';
+    display: inline-block;
+    margin-right: 14px;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+
+.price-and-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+    padding-left: 3px;
+}
+
+.price-text {
+    font-size: 2.9em !important;
+    color: black !important;
+    font-weight: bold !important;
+    margin-bottom: 15px !important;
+    text-align: left !important;
+    letter-spacing: -0.02em !important;
+}
+
+.get-yours-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 17px 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 230px;
+    box-shadow: 3px 3px 5px #b0b0b0;
+}
+
+.arrow-icon::after {
+    content: '\203A';
+    display: inline-block;
+    margin-left: 14px;
+    font-size: 1.3em;
+}
+
+
+/* Estilo do texto "Business Hours" */
+.business-hours-text {
+    font-size: 0.7em;
+    color: #777;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+
+
+/* Media Query para telas maiores (Tablet e Desktop) -  LAYOUT CORRIGIDO */
+@media (min-width: 768px) {
+    .section-two-content {
+        flex-direction: row; /* Garante que em telas grandes o layout seja em linha (horizontal) */
+    }
+
+    .section-two-image-and-buttons {
+        margin-right: 50px; /* Mantém o espaço entre celular/botões e texto */
+        flex-direction: row; /* **RECONFIRMA que imagem e botões ficam em LINHA (horizontal)** */
+        align-items: center; /* **RECONFIRMA alinhamento vertical CENTRO** */
+    }
+
+
+    .section-two-text {
+        flex: 1.2;
+        padding-right: 70px;
+    }
+
+
+}
+
+/* Estilos da Section Three - EXATAMENTE IGUAL AO EXEMPLO */
+.section-three {
+    background-color: #ffffff; /* Fundo branco */
+    padding: 80px 30px 90px; /* Padding superior, laterais e inferior */
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center; /* Alinhamento centralizado para a seção */
+}
+
+.section-three-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px; /* Espaçamento inferior para o cabeçalho */
+}
+
+.official-partners {
+    font-size: 0.9em;
+    color: #999; /* Cor cinza claro */
+    margin-bottom: 10px;
+}
+
+.best-in-class-tools {
+    display: flex;
+    align-items: center; /* Alinha texto e logo verticalmente */
+}
+
+.best-in-class-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 10px; /* Espaçamento entre texto e logo */
+}
+
+.brandwatch-logo {
+    height: 25px; /* Ajuste a altura do logo conforme necessário */
+}
+
+.section-three-content {
+    max-width: 900px; /* Largura máxima do conteúdo central */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.section-title {
+    font-size: 2.2em;
+    color: #1e5ba8; /* Cor azul do título principal */
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: 1.1em;
+    color: #666; /* Cor cinza um pouco mais escuro */
+    line-height: 1.5;
+    margin-bottom: 60px; /* Espaçamento inferior antes dos passos */
+}
+
+.steps-section {
+    display: flex;
+    justify-content: space-around; /* Distribui os passos igualmente */
+    margin-bottom: 50px; /* Espaçamento inferior antes do botão */
+}
+
+.step-box {
+    width: 25%; /* Cada passo ocupa 25% da largura */
+    padding: 20px;
+    background-color: #f2f2f2; /* Fundo cinza claro para os boxes dos passos */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-number {
+    font-size: 2.5em;
+    color: #1e5ba8;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.step-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.step-icon {
+    height: 60px; /* Ajuste a altura dos ícones conforme necessário */
+    margin-bottom: 20px;
+}
+
+.step-ico {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.step-description {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.4;
+}
+
+
+.order-now-button-section-three {
+    background-color: #28a745; /* Cor verde do botão */
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline-flex; /* Para alinhar texto e seta */
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-icon::after {
+    content: '\203A';
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+
+.section-three-footer {
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-top: 60px; /* Espaçamento superior para separar do conteúdo */
+}
+
+.footer-title {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.footer-subtitle {
+    font-size: 1.5em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.section-four {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-four .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;  Removido para permitir sobreposição */
+}
+
+.section-four .image-container {
+    width: 55%; /* Aumentei um pouco a largura para a sobreposição */
+    text-align: center; /* Mantém a imagem centralizada */
+    position: relative; /* Importante para o z-index */
+    z-index: 1; /* Imagem por baixo */
+}
+
+.section-four .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.section-four .conteudo-texto {
+    width: 50%; /* Reduzi um pouco para a sobreposição */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; /* Importante para o z-index */
+    z-index: 2; /* Texto por cima */
+    left: -50px; /* Esta é a chave para a sobreposição! */
+}
+/*h2, h1, form, button, input, label e arrow continuam a mesma coisa*/
+.section-four h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+}
+.section-four h1 {
+  font-size: 35px;
+}
+
+.section-four form {
+    margin-top: 20px;
+}
+
+.section-four label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section-four input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.section-four button {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.section-four .arrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid black;
+    margin-left: 6px;
+    margin-top: 4px;
+}
+
+.section-five {
+    background-color: #fff; /* Fundo branco, como na imagem */
+    color: #000; /* Texto preto */
+    padding: 50px 0;
+    font-family: Arial, sans-serif; /* Ou a fonte que você estiver usando */
+    display: flex;
+    justify-content: center; /* Centraliza o container */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.section-five .container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex; /* Flexbox para alinhar texto e imagem */
+    justify-content: space-between; /* Espaço entre texto e imagem */
+    align-items: center; /* Alinhamento vertical */
+}
+
+.section-five .conteudo-texto {
+    width: 45%; /* Ajuste a largura conforme necessário */
+    text-align: left;
+}
+
+.section-five .conteudo-texto h2{
+  font-size: 2.5em;
+  margin-bottom: 45px;
+  font-weight: bold;
+}
+
+.section-five .conteudo-texto p{
+  font-size: 12px;
+
+}
+
+.section-five .image-container {
+    width: 50%; /* Ajuste a largura conforme necessário */
+    text-align: center; /* Centraliza a imagem dentro do container */
+}
+
+.section-five .image-container img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+/* Estilos adicionais (opcionais, mas recomendados): */
+.section-five h2 {
+    /* Estilos para o título "About Loxias" */
+    margin-bottom: 0.5em; /* Espaço abaixo do título */
+
+}
+
+.section-five p {
+    /* Estilos para os parágrafos */
+    margin-bottom: 1em; /* Espaço entre os parágrafos */
+    line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+/* Seção de Depoimentos (AGORA section-six) */
+.section-six { /* CORRETO */
+    background-color: #fff;
+    color: #000;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.section-six .container { /* CORRETO */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.section-six .detalhe{ /* CORRETO */
+  margin-top: 30px;
+  padding: 15px;
+}
+
+.section-six .detalhe p:first-child{ /* CORRETO */
+  font-weight: bold;
+}
+
+.section-six h2 { /* CORRETO */
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.section-six .testimonial-grid { /* CORRETO */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.section-six .testimonial { /* CORRETO */
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+.section-six .testimonial .quote{ /* CORRETO */
+  font-size: 13px;
+}
+
+.section-six .author { /* CORRETO */
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.section-six .author img { /* CORRETO */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.section-six .author-name{ /* CORRETO */
+    font-weight: bold;
+}
+
+.section-six .author-info p { /* CORRETO */
+    margin: 0;
+    font-size: 0.9em;
+
+}
+
+.section-six .logo-grid { /* CORRETO */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-six .logo-grid img { /* CORRETO */
+    max-width: 150px;
+    height: auto;
+    margin: 10px;
+    filter: grayscale(100%);
+}
+
+/* Seção de Depoimentos 2 (AGORA section-seven) */
+.section-seven { /* CORRETO */
+    background-color: #f8f8f8;
+    color: #000;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.section-seven .container { /* CORRETO */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-seven .testimonial-single { /* CORRETO */
+  border: 1px solid #ddd;
+  padding: 25px;
+}
+
+.section-seven .rating { /* CORRETO */
+    margin-bottom: 15px;
+    color: #ffcc00;
+    font-size: 1.2em;
+}
+.section-seven .quote{ /* CORRETO */
+  font-size: 13px;
+}
+
+.section-seven .author { /* CORRETO */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.section-seven .author img { /* CORRETO */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.section-seven .author-info { /* CORRETO */
+    text-align: left;
+}
+
+.section-seven .author-info p { /* CORRETO */
+    margin: 0;
+    font-size: 0.9em;
+}
+.section-seven .author-name{ /* CORRETO */
+    font-weight: bold;
+}
+
+/* Media query (mantida) */
+@media (max-width: 768px) {
+    .section-six .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    .section-six .logo-grid img {
+      max-width: 110px;
+    }
+}
+
+.order-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px; /* Ajuste */
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #333;
+}
+
+.order-button .icon-wrapper {
+    width: 35px; /* Largura do círculo */
+    height: 35px; /* Altura do círculo */
+    border-radius: 50%; /* Faz o círculo */
+    background-color: #fff; /* Fundo branco */
+    display: flex; /* Flexbox para centralizar o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.order-button .icon-wrapper i {
+    color: #000; /* Cor do ícone (preto, para contrastar com o fundo branco) */
+    margin-left: 0; /* Zera a margem, se você adicionou antes */
+}
+
+/* Animação no hover (opcional) */
+ .order-button:hover .icon-wrapper i{
+        transform: translateX(5px);
+    }
+
+    .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-family: Arial, sans-serif; /* Sua fonte */
+      }
+      
+      .feature-item {
+        background-color: #fff;
+        border: none; /* Removido a borda, a sombra agora é o destaque */
+        border-radius: 30px;
+        padding: 5px 20px;
+        margin-bottom: 20px; /* Espaço entre os itens */
+        display: flex;
+        align-items: center;
+        /* Sombra mais forte, como na imagem */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ajuste se necessário */
+      }
+      
+      .feature-icon {
+          /* Remove estilos do Font Awesome */
+          /* color: #0f827c;  Removido */
+          /* font-size: 1.5em; Removido */
+      
+          /* Usa a imagem como fundo */
+          background-image: url('images/check.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+      
+          /* Define largura e altura (AJUSTE!) */
+          width: 30px;  /* Exemplo - coloque o tamanho CORRETO */
+          height: 30px; /* Exemplo - coloque o tamanho CORRETO */
+      
+          display: inline-block; /* Permite width/height no <i> */
+          margin-right: 15px; /* Espaço entre ícone e texto */
+      
+          /* Esconde o texto do Font Awesome */
+          text-indent: -9999px;
+          overflow: hidden;
+          font-size: 0px
+      }
+      
+      /* Media query (opcional, mas recomendado) */
+      @media (max-width: 768px) {
+          .feature-item {
+              flex-direction: column;
+              text-align: center;
+          }
+      
+          .feature-icon {
+              margin-right: 0;
+              margin-bottom: 10px;
+          }
+      }
+      
+      /* Se você quiser centralizar a lista, adicione: */
+      .feature-list {
+          max-width: 500px; /* Largura máxima (opcional) */
+          margin: 0 auto;  /* Centraliza */
+      }
+
+      .get-yours-button {
+        background-color: #0f827c; /* Cor de fundo verde (ajuste!) */
+        color: #fff; /* Cor do texto branco */
+        border: none;
+        padding: 15px 25px;
+        border-radius: 30px; /* Bordas arredondadas */
+        font-family: Arial, sans-serif; /* Sua fonte */
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 280px; /* Ajuste a largura */
+        transition: background-color 0.3s ease; /* Transição suave no hover */
+    }
+    
+    .get-yours-button:hover {
+        background-color: #0b6662; /* Verde mais escuro no hover (ajuste!) */
+    }
+    
+    .get-yours-button .icon-wrapper {
+        width: 35px; /* Largura do círculo */
+        height: 35px; /* Altura do círculo */
+        border-radius: 50%;
+        background-color: #fff; /* Fundo branco do círculo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .get-yours-button .icon-wrapper i {
+        color: #0f827c; /* Cor do ícone (verde) */
+        margin-left: 0; /* Remove margem extra, se houver */
+        font-size: 1.2em; /* Ajuste o tamanho do icone*/
+    }
+    
+    /* Animação opcional no hover */
+    .get-yours-button:hover .icon-wrapper i{
+        transform: translateX(5px);
+    }
