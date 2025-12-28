@@ -253,7 +253,7 @@ body {
   color: var(--color-white);
 }
 
-/* Updated about-grid to display text left and timeline right on desktop */
+/* Updated about-grid to align items at the top */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -300,23 +300,23 @@ body {
 }
 
 /* Added timeline wrapper styles */
+/* Made timeline smaller and more compact */
 .timeline-wrapper {
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
 .timeline-main-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-white);
-  margin-bottom: 3rem;
-  text-align: center;
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
-/* Changed timeline from horizontal to vertical layout */
 .timeline-vertical {
   position: relative;
-  padding: 2rem 0;
-  margin-left: 2rem;
+  padding: 1rem 0;
+  margin-left: 1.5rem;
 }
 
 .timeline-vertical::before {
@@ -333,8 +333,8 @@ body {
 
 .timeline-item {
   position: relative;
-  padding-left: 4rem;
-  padding-bottom: 3rem;
+  padding-left: 3rem;
+  padding-bottom: 2rem;
   opacity: 0;
   transform: translateX(-2rem);
   animation: fadeInLeft 0.6s ease forwards;
@@ -374,8 +374,8 @@ body {
   position: absolute;
   left: 0;
   top: 0.25rem;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background: var(--color-slate-800);
   border: 3px solid var(--color-cyan);
   border-radius: 50%;
@@ -395,10 +395,10 @@ body {
 .timeline-dot-current {
   background: var(--color-cyan);
   border-color: var(--color-cyan-light);
-  border-width: 4px;
-  width: 2.5rem;
-  height: 2.5rem;
-  box-shadow: 0 0 30px rgba(6, 182, 212, 0.8);
+  border-width: 3px;
+  width: 2rem;
+  height: 2rem;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.8);
   animation: pulseDot 2s ease-in-out infinite;
   color: var(--color-slate-900);
 }
@@ -419,7 +419,7 @@ body {
   background: rgba(30, 41, 59, 0.6);
   border: 2px solid rgba(6, 182, 212, 0.3);
   border-radius: 0.75rem;
-  padding: 1.5rem;
+  padding: 1rem;
   transition: all 0.3s ease;
 }
 
@@ -438,21 +438,21 @@ body {
 }
 
 .timeline-year {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--color-cyan);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-content-current .timeline-year {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   color: var(--color-cyan-light);
 }
 
 .timeline-desc {
   color: rgba(255, 255, 255, 0.85);
-  font-size: 0.9375rem;
-  line-height: 1.6;
+  font-size: 0.875rem;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -541,6 +541,7 @@ body {
 }
 
 /* Added contact section styles */
+/* Removed green line from footer by removing the transition */
 .contact-section {
   padding: 8rem 1rem;
   background: linear-gradient(135deg, var(--color-cyan) 0%, #0891b2 100%);
@@ -575,6 +576,7 @@ body {
 }
 
 /* Added footer styles */
+/* Updated footer text */
 .footer {
   background: var(--color-dark-teal);
   padding: 3rem 1rem;
@@ -584,6 +586,9 @@ body {
 .footer-text {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.875rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* Added chat button styles */
@@ -987,30 +992,5 @@ body {
   list-style: none;
   padding: 0;
   margin: 0 0 2rem 0;
-  text-align: left;
-}
-
-.option-features li {
-  padding: 0.75rem 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.option-features li:last-child {
-  border-bottom: none;
-}
-
-.option-info {
-  background: rgba(6, 182, 212, 0.1);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-style: italic;
-}
-
-.comparison-note {
-  /* This rule was incomplete and caused a parse error. */
-  /* Added a placeholder or consider adding actual styles if intended. */
+  text-align: center;
 }
