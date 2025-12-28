@@ -253,12 +253,20 @@ body {
   color: var(--color-white);
 }
 
+/* Updated about-grid to display text left and timeline right on desktop */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
 }
 
 .about-text p {
@@ -467,12 +475,25 @@ body {
   font-size: 1.125rem;
 }
 
+/* Updated tech-grid to show 4 cards per row on desktop */
 .tech-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tech-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .tech-card {
