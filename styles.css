@@ -291,19 +291,19 @@ body {
   font-style: italic;
 }
 
-/* Timeline */
-.timeline-container {
-  position: relative;
+/* Added timeline wrapper styles */
+.timeline-wrapper {
+  margin-top: 3rem;
 }
 
-.timeline-title {
+.timeline-main-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-white);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
-/* Replaced vertical timeline with horizontal timeline design */
 /* Horizontal Timeline */
 .timeline-horizontal {
   position: relative;
@@ -482,33 +482,8 @@ body {
   font-weight: 500;
 }
 
-/* Hide old vertical timeline */
-.timeline-vertical {
-  display: none;
-}
-
-.timeline-line {
-  display: none;
-}
-
-.timeline-entry {
-  display: none;
-}
-
-.timeline-dot {
-  display: none;
-}
-
-.timeline-box {
-  display: none;
-}
-
-.timeline-period {
-  display: none;
-}
-
-.timeline-text {
-  display: none;
+.timeline-h-item-current {
+  /* Special styling for current item */
 }
 
 /* Technologies Section */
@@ -577,8 +552,126 @@ body {
   line-height: 1.5;
 }
 
-/* Domain Page Specific Styles */
+/* Added contact section styles */
+.contact-section {
+  padding: 8rem 1rem;
+  background: linear-gradient(135deg, var(--color-cyan) 0%, #0891b2 100%);
+  position: relative;
+}
 
+.contact-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.contact-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Added footer styles */
+.footer {
+  background: var(--color-dark-teal);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+/* Added chat button styles */
+.chat-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: var(--color-whatsapp);
+  color: var(--color-slate-900);
+  border: none;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.chat-button:hover {
+  background: var(--color-whatsapp-hover);
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+}
+
+.chat-icon {
+  flex-shrink: 0;
+}
+
+.chat-text {
+  font-weight: 600;
+}
+
+.chat-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--color-whatsapp);
+  opacity: 0.4;
+  animation: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+.chat-pulse-1 {
+  animation-delay: 0s;
+}
+
+.chat-pulse-2 {
+  animation-delay: 0.5s;
+}
+
+.chat-pulse-3 {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Domain Page Specific Styles */
 .domain-intro {
   max-width: 900px;
   margin: 0 auto;
@@ -639,8 +732,6 @@ body {
   font-size: 1rem;
 }
 
-/* Benefits Grid */
-
 .benefits-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -687,8 +778,6 @@ body {
   font-size: 1rem;
   line-height: 1.6;
 }
-
-/* Important Section */
 
 .important-section {
   padding: 8rem 1rem;
@@ -745,8 +834,6 @@ body {
   color: var(--color-white);
   font-size: 1.125rem;
 }
-
-/* Steps Container */
 
 .steps-container {
   display: grid;
@@ -833,8 +920,6 @@ body {
 .support-text strong {
   color: var(--color-white);
 }
-
-/* Options Grid */
 
 .options-grid {
   display: grid;
@@ -958,8 +1043,6 @@ body {
   font-weight: 700;
 }
 
-/* FAQ Section */
-
 .faq-section {
   padding: 8rem 1rem;
   background: var(--color-teal);
@@ -995,9 +1078,90 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Fixed incomplete faq-answer class */
 .faq-answer {
-  /* Added to fix the parse error. No content provided in updates. */
-  color: rgba(255, 255, 255, 0.85); /* Example default based on other text styles */
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .hero-buttons {
+    flex-direction: row;
+  }
+
+  .logo {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .contact-title {
+    font-size: 3.5rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .steps-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .step-arrow {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .chat-text {
+    display: none;
+  }
+
+  .chat-button {
+    padding: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    justify-content: center;
+  }
+
+  .timeline-horizontal {
+    overflow-x: scroll;
+  }
+
+  .timeline-items {
+    min-width: 900px;
+  }
 }
