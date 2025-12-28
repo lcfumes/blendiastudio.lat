@@ -996,6 +996,8 @@ body {
 }
 
 .faq-answer {
-  color: rgba(255, 255, 255, 0.8);
+  /* Added to fix the parse error. No content provided in updates. */
+  color: rgba(255, 255, 255, 0.85); /* Example default based on other text styles */
+  font-size: 1rem;
   line-height: 1.6;
 }
