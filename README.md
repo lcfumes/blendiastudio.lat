@@ -14,7 +14,7 @@ Site profissional estático para BlendIA Studio - Criação de sites em 24 horas
 
 ## 📁 Estrutura do Projeto
 
-```
+\`\`\`
 /
 ├── index.html          # Página principal
 ├── styles.css          # Estilos CSS
@@ -22,7 +22,7 @@ Site profissional estático para BlendIA Studio - Criação de sites em 24 horas
 ├── blendialogo.png     # Logo da empresa
 ├── sitemap.xml         # Sitemap para SEO
 └── robots.txt          # Configuração de crawlers
-```
+\`\`\`
 
 ## 🌐 Como Usar
 
@@ -39,7 +39,7 @@ Basta fazer upload de todos os arquivos para qualquer servidor web ou serviço d
 
 Abra o arquivo `index.html` diretamente no navegador ou use um servidor local:
 
-```bash
+\`\`\`bash
 # Python
 python -m http.server 8000
 
@@ -48,7 +48,7 @@ npx http-server
 
 # PHP
 php -S localhost:8000
-```
+\`\`\`
 
 Acesse em: `http://localhost:8000`
 
@@ -58,13 +58,13 @@ Acesse em: `http://localhost:8000`
 
 As cores principais estão definidas em `styles.css` usando CSS variables:
 
-```css
+\`\`\`css
 :root {
   --color-dark-teal: #0a2e2e;
   --color-cyan: #06b6d4;
   --color-whatsapp: #25d366;
 }
-```
+\`\`\`
 
 ### Conteúdo
 
